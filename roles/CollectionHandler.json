@@ -58,7 +58,12 @@
         "Roles": {
             "Level": 1
         },
-        "ServiceCaches": [],
+        "ServiceCaches": [
+            {
+                "Level": 1,
+                "Name": "ComponentsCache"
+            }
+        ],
         "Timers": {
             "Level": 15
         },
