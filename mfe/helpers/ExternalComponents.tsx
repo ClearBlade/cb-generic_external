@@ -117,7 +117,7 @@ export default function ExternalComponents(props: ComponentsProps) {
   return (
     <Formik
       initialValues={{
-        schema: (component.settings.inputAttributes as AttributeOption[]) || [],
+        schema: schema.filter((attribute) => attribute.selected) as unknown as AttributeOption[] || [],
         settings: {
           targetAttributes:
             (component.settings.targetAttributes as AttributeOption[]) || [],
