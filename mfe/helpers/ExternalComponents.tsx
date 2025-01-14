@@ -41,7 +41,7 @@ const RawDataIncomingTopicField = () => {
             <span style={{ fontWeight: "bold" }}>Raw Data Incoming Topic</span>
           </Typography>
         </FormLabel>
-        <Tooltip title="This is an optional field. The topic that the normalizer for this component will read data on to be filtered and preprocessed. If blank, it will use data from the default normalizer.">
+        <Tooltip title="This is an optional field. The topic that the normalizer for this component will read data on to be filtered and preprocessed. If blank, it will filter data directly from the default normalizer topic (_monitor/asset/default/data).">
           <IconButton
             size="small"
             aria-label="help"
@@ -68,13 +68,8 @@ const RawDataIncomingTopicField = () => {
             color="error"
             style={{ marginRight: "4px" }}
           >
-            Warning: Custom Raw Data Topic Set.
+            Warning: Custom Raw Data Topic set. You will need to build a custom normalizer to publish to your set topic.
           </Typography>
-          <Tooltip title="The Generic External component by default filters data in from the default normalizer topic. If you use a custom Raw Data Topic, you will need to build a custom normalizer for your implementation.">
-            <IconButton size="small" aria-label="help">
-              <HelpOutlineIcon fontSize="small" />
-            </IconButton>
-          </Tooltip>
         </div>
       )}
     </FormControl>
